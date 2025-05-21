@@ -29,8 +29,8 @@ Python for Everybody, Dr. Chuck Severance, https://www.py4e.com/, CC.
 
 - for loop manages the iteration variable... Well, in C you do that tho.
 
-- you can set a variable to `None` in which there is just nothing stored.
+- you can set a variable to `None` in which there is just nothing stored, it is usually used as a boolean constant.
 
 - `is` and `is not` compares not only values but also types.
 
-- 
+- use `is` on `None` and `True/False`.
