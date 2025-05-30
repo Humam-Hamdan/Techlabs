@@ -15,16 +15,14 @@ hfile = open(
 file = hfile.readlines()
 
 dict = {}
-list = []
+times = []
 for line in file:
     if line.startswith('From '):
-        x = line.split()
-        list.append(x[5])
-        for time in list:
-            y = time.split(':')
-            print(y[0])
-            dict[y[0]] = dict.get(y[0], 0) + 1
-            print(dict)
+        times.append(line.split()[5])
+for time in times:
+    y = time.split(":")[0]
+    dict[y] = dict.get(y, 0) + 1
+
 
 templist = []
 for k, v in dict.items():
