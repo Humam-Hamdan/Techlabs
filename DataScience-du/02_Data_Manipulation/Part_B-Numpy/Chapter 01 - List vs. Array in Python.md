@@ -1,32 +1,14 @@
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-%cd drive/MyDrive/TechLabs/02_Data\ Manipulation/Part\ B\ -\ Numpy
-```
-
-
-```python
-# ALWAYS IMPORT NUMPY FIRST.
-import numpy as np
-```
 
 # Chapter 1 - List vs. Array in Python
-### Hey Techie,   
+## Hey Techie,   
 Welcome to the first notebook of this Numpy tutorial series. We encourage you to take this notebook as a template to code along the instruction video, which you may find at: https://youtu.be/OVD26YMkT_c. Today's video explains the differences between built-in lists in Python and Numpy arrays. In the end, please try to solve the presented tasks. In case you are interested, you find a complete walk through the tasks at: https://youtu.be/mkbgEvUkSaM. 
 
-#### Have fun! :-)   
+## Have fun! :-)   
 *Video length in total*: 15 minutes   
 *Self-study time*: 15 minutes   
 *Total*: **30 minutes**   
-#### Credits
+## Credits
 Complete Python Numpy Tutorial for Beginners, Nate at StrataScratch, https://www.youtube.com/channel/UCW8Ews7tdKKkBT6GdtQaXvQ.
-<hr style="border:2px solid gray"> </hr>   
 
 # Intro to NumPy (Numerical Python)
 
@@ -36,10 +18,11 @@ It is a python library that provides a multidimensional array object, various de
 
 NumPy arrays form the core of nearly the entire ecosystem of data science tools in Python, so time spent learning to use NumPy effectively will be valuable no matter what aspect of data science interests you.
 
+# Notes:
 
+- 
 
-
-## Lists in Python
+# Lists in Python
 
 - Natively built into python and doesn't require you to import libraries to use the functionality
 - Lists are great to store values collectively and retrieve data easily
@@ -124,9 +107,8 @@ np.array([[1, 2, 3],
           [3, 3]])
 ```
 
-<hr style="border:2px solid gray"> </hr>   
 
-## Practice Tasks
+# Practice Tasks
 
 #### 1. Create a list containing the values 1, 3, and 5.
 
@@ -136,14 +118,6 @@ np.array([[1, 2, 3],
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>[1, 3, 5]</code>
-</p>
-</details> 
 
 #### 2. Create a list containing the values from 0 to 9 using the range function and assign it to *L*.
 
@@ -153,14 +127,6 @@ np.array([[1, 2, 3],
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>L = list(range(10))</code>
-</p>
-</details> 
 
 #### 3. Print the first element from *L*.
 
@@ -170,14 +136,6 @@ np.array([[1, 2, 3],
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print(L[0])</code>
-</p>
-</details> 
 
 #### 4. Create an array containing the values [5, 4, 3, 2, 1] and store is in *A*.
 
@@ -187,14 +145,6 @@ np.array([[1, 2, 3],
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>A = np.array([5, 4, 3, 2, 1])</code>
-</p>
-</details> 
 
 #### 5. Print the datatype of array *A*.
 
@@ -204,14 +154,6 @@ np.array([[1, 2, 3],
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print(A.dtype)</code>
-</p>
-</details> 
 
 #### 6. What is the expected datatype of this array? Why? Enter the expected datatype between quotation marks
 
@@ -222,14 +164,6 @@ A2 = np.array([3.14, 4, 2, 3])
 A2.dtype == ''
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>A2.dtype == 'float64'</code>
-</p>
-</details> 
 
 #### 7. For practice reasons, create a multidimesional array from a multidimesional list. 
 
@@ -239,12 +173,4 @@ A2.dtype == ''
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code># EXAMPLE</code><br />
-    <code>array = np.array([[1, 2], [3, 4], [5, 6]])</code>
-</p>
-</details>
+
