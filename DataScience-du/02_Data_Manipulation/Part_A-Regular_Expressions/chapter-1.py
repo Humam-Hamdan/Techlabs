@@ -8,14 +8,18 @@ import re
 with open("data/practice.txt", "r") as file:
     wikipedia_article = file.read()
 # INSPECT TEXT HERE.
-print(wikipedia_article)
+# print(wikipedia_article)
 
 
 def answer():
     # START YOUR CODE HERE.
-
+    pattern = re.compile(r'(==|===)\s(([A-Za-z]+\s*)+)(==|===)', re.I)
+    matches = pattern.finditer(wikipedia_article)
+    match_list = list()
+    for match in matches:
+        match_list.append(match.group(2).strip())
     # RETURN YOUR ANSWER HERE.
-    return
+    return match_list
 
 
 # Checking Solution

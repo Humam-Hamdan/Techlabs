@@ -56,5 +56,41 @@ with open("data/data.txt", "r", encoding="utf-8") as file:
 
 # Notes:
 
-- 
+- you can make a regex for any text pattern thinkable -known from info1-.
+
+- a raw string is a string with a starting r, which interprets the string literally, so no auto whitespacing and whatnot.
+
+- we use `pattern = re.compile(r'abc')`  to set the pattern to be 'abc' in this order.
+
+- then `matches = pattern.finditer(big_text_name)`.
+
+- then you print the `matches` with a loop.
+
+- what is printed then is a `span`, which gives the start and end index of the match.
+
+- you can just then slice the string with the indexes and we're done!
+
+- the previous search is case sensitive and order sensitive.
+
+- if you want to get the matches of special chars then you need the backslash (to escape the regex).
+
+- when we want an or operator we put the chars into `[]`.
+
+- a `^` negates the matching in the char set.
+
+- you can use `*, +, ?, {}, {min, max}` to search for a number of chars at once, i.e. `re.compile(r'\d{3}')` searches for 3 digits.
+
+- the `()` are used to group the expression.
+
+- you can get the group of the item, by `match.group(index)`.
+
+- you can substitute, with `pattern.sub(r'\group_index\...', the_replaced_text)`.
+
+- `pattern.findall` will return the matches only, with no extra data.
+
+- `pattern.match` matches at the start of the string.
+
+- `pattern.search` returns the first item which matches.
+
+- in the `re.compile` if you do not care about lower/upper case shenanigans then just pass the `re.IGNORECASE`, or `re.I` flag.
 
