@@ -1,36 +1,19 @@
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-%cd drive/MyDrive/TechLabs/02_Data\ Manipulation/Part\ B\ -\ Numpy
-```
-
-
-```python
-# ALWAYS IMPORT NUMPY FIRST.
-import numpy as np
-```
 
 # Chapter 2 - How to Create Arrays and Functions in Python
-### Hey Techie,   
+## Hey Techie,   
 Welcome to the second notebook of this Numpy tutorial series. We encourage you to take this notebook as a template to code along the instruction video, which you may find at: https://youtu.be/F5sKh-3V3KA. Today's video explains multiple options on how to create Numpy arrays. In the end, please try to solve the presented tasks. In case you are interested, you find a complete walk through the tasks at: https://youtu.be/yLn52ppKO80. 
 
-#### Have fun! :-)   
+### Have fun! :-)   
 *Video length in total*: 15 minutes   
 *Self-study time*: 15 minutes   
 *Total*: **30 minutes**   
-#### Credits
+### Credits
 Complete Python Numpy Tutorial for Beginners, Nate at StrataScratch, https://www.youtube.com/channel/UCW8Ews7tdKKkBT6GdtQaXvQ.
 <hr style="border:2px solid gray"> </hr>   
 
-### Creating Arrays from Scratch
+# Creating Arrays from Scratch
 
-#### Especially for larger arrays, it's more efficient to create arrays from scratch using functions built into NumPy
+## Especially for larger arrays, it's more efficient to create arrays from scratch using functions built into NumPy
 
 
 ```python
@@ -40,7 +23,7 @@ np.zeros(10, dtype=int)
 
 
 ```python
-# create a 3x5 float-ing point array filled with 1s
+# create a 3x5 floating point array filled with 1s
 np.ones((3,5), dtype=float)
 ```
 
@@ -153,139 +136,77 @@ a.dtype
 
 ## Practice Tasks
 
-#### 1. Create an integer array with 100 ones.
+### 1. Create an integer array with 100 ones.
 
 
 ```python
 # START YOUR CODE HERE.
+np.ones(100)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.ones(100)</code><br />
-</p>
-</details>
 
-#### 2. Create a (4, 3) float array filled with zeros.
+### 2. Create a (4, 3) float array filled with zeros.
 
 
 ```python
 # START YOUR CODE HERE.
+np.zeros(4,3)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.zeros((4, 3), dtype = "float64")</code><br />
-</p>
-</details>
 
-#### 3. Create a (5, 2) array filled with 6.28.
+### 3. Create a (5, 2) array filled with 6.28.
 
 
 ```python
 # START YOUR CODE HERE.
+np.full((5,2), 6.28)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.full((5, 2), 6.28)</code><br />
-</p>
-</details>
-
-#### 4. Create an array filled with a linear sequence, started at 0, ending at 30, stepping by 3.
+### 4. Create an array filled with a linear sequence, started at 0, ending at 30, stepping by 3.
 
 
 ```python
 # START YOUR CODE HERE.
+np.arange(0, 30, 3)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.array(range(0, 31, 3))</code><br />
-</p>
-</details>
-
-#### 5. Create an array of 9 evenly  spaced values between 0 and 64 inclusive.
+### 5. Create an array of 9 evenly  spaced values between 0 and 64 inclusive.
 
 
 ```python
 # START YOUR CODE HERE.
+np.linspace(0, 64, 9)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.linspace(0, 64, 9)</code><br />
-</p>
-</details>
-
-
-#### 6. Create a (5, 2) array of uniformaly distributed random values between 0 and 1.
+### 6. Create a (5, 2) array of uniformaly distributed random values between 0 and 1.
 
 
 ```python
 # START YOUR CODE HERE.
+np.random.random(5,2)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.random.random((5, 2))</code><br />
-</p>
-</details>
-
-#### 7. Create an array of 10 random integers in the interval [0, 5].
+### 7. Create an array of 10 random integers in the interval [0, 5].
 
 
 ```python
 # START YOUR CODE HERE.
+np.random.randint(0,6,10)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.random.randint(0, 6, 10)</code><br />
-</p>
-</details>
-
-#### 8. Create a (4, 4) identity matrix.
+### 8. Create a (4, 4) identity matrix.
 
 
 ```python
 # START YOUR CODE HERE.
+np.eye(4)
 
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.eye(4)</code><br />
-</p>
-</details>

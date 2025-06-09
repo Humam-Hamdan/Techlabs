@@ -20,6 +20,10 @@ NumPy arrays form the core of nearly the entire ecosystem of data science tools 
 
 # Notes:
 
+- we use `numpy.array(list0, list1, ...)` to make an array / matrix.
+
+- a numpy array can only store a single type, it'll implicitly cast everything it sees to the first encountered datatype or to the 'largest' (think float > int).
+
 - 
 
 # Lists in Python
@@ -27,7 +31,7 @@ NumPy arrays form the core of nearly the entire ecosystem of data science tools 
 - Natively built into python and doesn't require you to import libraries to use the functionality
 - Lists are great to store values collectively and retrieve data easily
 
-#### We can create list of integers
+> We can create list of integers
 
 
 ```python
@@ -48,7 +52,7 @@ L
 type(L[0])
 ```
 
-#### We can create a list of strings
+> We can create a list of strings
 
 
 ```python
@@ -61,7 +65,7 @@ L2
 type(L2[0])
 ```
 
-#### We can create heterogeneous lists
+> We can create heterogeneous lists
 
 
 ```python
@@ -76,13 +80,14 @@ What is an array?
 - An array is a data structure that allows you to store values...like a list
 
 How is it different than a list?
+
 - An array is more efficient at storing large amounts of data
+
 - Easy and simple to perform numerical/math operations
 
 ### Creating Arrays From Python Lists
 
-#### Use np.array to create arrays from Python lists
-
+> Use np.array to create arrays from Python lists
 
 ```python
 # integer array
@@ -91,15 +96,13 @@ numpyarrayA = np.array(listA)
 numpyarrayA
 ```
 
-#### Numpy is constrained to arrays that all contain the same type. If the types do not match, NumPy will try to change the data type
-
+> Numpy is constrained to arrays that all contain the same type. If the types do not match, NumPy will try to change the data type
 
 ```python
 np.array([3.14, 4, 2, 3])
 ```
 
-#### Numpy allows you to make multidimensional arrays using lists of lists
-
+> Numpy allows you to make multidimensional arrays using lists of lists
 
 ```python
 np.array([[1, 2, 3], 
@@ -115,6 +118,7 @@ np.array([[1, 2, 3],
 
 ```python
 # START YOUR CODE HERE.
+l = [1,3,5]
 
 ```
 
@@ -124,6 +128,7 @@ np.array([[1, 2, 3],
 
 ```python
 # START YOUR CODE HERE.
+l = list(range(0,10))
 
 ```
 
@@ -133,6 +138,7 @@ np.array([[1, 2, 3],
 
 ```python
 # START YOUR CODE HERE.
+l[0]
 
 ```
 
@@ -142,6 +148,7 @@ np.array([[1, 2, 3],
 
 ```python
 # START YOUR CODE HERE.
+A = np.array([5,4,3,2,1])
 
 ```
 
@@ -151,6 +158,7 @@ np.array([[1, 2, 3],
 
 ```python
 # START YOUR CODE HERE.
+type(A)
 
 ```
 
@@ -161,7 +169,8 @@ np.array([[1, 2, 3],
 ```python
 A2 = np.array([3.14, 4, 2, 3])
 # START YOUR CODE HERE.
-A2.dtype == ''
+
+A2.dtype == 'float'
 ```
 
 
@@ -170,6 +179,12 @@ A2.dtype == ''
 
 ```python
 # START YOUR CODE HERE.
+l = [
+    [1,2,3],
+    [2,3,4],
+    [3,4,5]
+]
+A = np.array(l)
 
 ```
 

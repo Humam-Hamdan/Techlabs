@@ -1,32 +1,13 @@
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-%cd drive/MyDrive/TechLabs/02_Data\ Manipulation/Part\ B\ -\ Numpy
-```
-
-
-```python
-# ALWAYS IMPORT NUMPY FIRST.
-import numpy as np
-```
-
 # Chapter 03 - Useful Array Attributes of NumPy
-### Hey Techie,   
+## Hey Techie,   
 Welcome to the first notebook of this Numpy tutorial series. We encourage you to take this notebook as a template to code along the instruction video, which you may find at: https://youtu.be/aGPjAOhomY4. Today's video explains how to assess different important attributes from Numpy arrays. In the end, please try to solve the presented tasks. In case you are interested, you find a complete walk through the tasks at: https://youtu.be/Yk3H3VRDfm0 (*relevant part until 6:15 min*). 
 
-#### Have fun! :-)   
+## Have fun! :-)   
 *Video length in total*: 11 minutes   
 *Self-study time*: 11 minutes   
 *Total*: **22 minutes**   
-#### Credits
+## Credits
 Complete Python Numpy Tutorial for Beginners, Nate at StrataScratch, https://www.youtube.com/channel/UCW8Ews7tdKKkBT6GdtQaXvQ.
-<hr style="border:2px solid gray"> </hr>   
 
 # The Basics of NumPy Arrays
 
@@ -47,7 +28,6 @@ We'll cover a few categories of basic array manipulations here:
 First let's discuss some useful array attributes.
 We'll start by defining three random arrays, a one-dimensional, two-dimensional, and three-dimensional array.
 We'll use NumPy's random number generator, which we will *seed* with a set value in order to ensure that the same random arrays are generated each time this code is run:
-
 
 ```python
 np.random.seed(0)  # seed for reproducibility
