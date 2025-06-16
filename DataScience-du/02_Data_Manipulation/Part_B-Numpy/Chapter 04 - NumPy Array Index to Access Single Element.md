@@ -1,32 +1,13 @@
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-%cd drive/MyDrive/TechLabs/02_Data\ Manipulation/Part\ B\ -\ Numpy
-```
-
-
-```python
-# ALWAYS IMPORT NUMPY FIRST.
-import numpy as np
-```
-
 # Chapter 04 - NumPy Array Index to Access Single Element 
 ### Hey Techie,   
 Welcome to the fourth notebook of this Numpy tutorial series. We encourage you to take this notebook as a template to code along the instruction video, which you may find at: https://www.youtube.com/watch?v=sKMuioo7Xf8. Today's video explains the fundamentals of indexing arrays. In the end, please try to solve the presented tasks. In case you are interested, you find a complete walk through the tasks at: https://youtu.be/Yk3H3VRDfm0 (*relevant part starting at 6:15 min*). 
 
-#### Have fun! :-)   
+## Have fun! :-)   
 *Video length in total*: 13 minutes   
 *Self-study time*: 13 minutes   
 *Total*: **26 minutes**   
-#### Credits
+## Credits
 Complete Python Numpy Tutorial for Beginners, Nate at StrataScratch, https://www.youtube.com/channel/UCW8Ews7tdKKkBT6GdtQaXvQ.
-<hr style="border:2px solid gray"> </hr>   
 
 ## Array Indexing: Accessing Single Elements
 
@@ -109,11 +90,10 @@ x1
 x1.dtype
 ```
 
-<hr style="border:2px solid gray"> </hr>   
 
-## Practice Tasks   
+# Practice Tasks   
 
-#### For the following six tasks, refer to the arrays created below. Run this code to get started.
+## For the following six tasks, refer to the arrays created below. Run this code to get started.
 
 
 ```python
@@ -122,104 +102,57 @@ x1 = np.random.randint(10, size=9)  # One-dimensional array
 x2 = np.random.randint(10, size=(3, 3))  # Two-dimensional array
 ```
 
-#### 1. Print the first element of x1.
+## 1. Print the first element of x1.
 
 
 ```python
 # START YOUR CODE HERE.
-
+x1[0]
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print(x1[0])</code>
-</p>
-</details>
 
-#### 2. Print the fifth element of x1.
+## 2. Print the fifth element of x1.
 
 
 ```python
 # START YOUR CODE HERE.
-
+x1[4]
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print(x1[4])</code>
-</p>
-</details>
 
-#### 3. Print the second to last element of x1 using negative indicies.
+## 3. Print the second to last element of x1 using negative indicies.
 
 
 ```python
 # START YOUR CODE HERE.
-
+x1[-2]
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print(x1[-2])</code>
-</p>
-</details>
 
-#### 4. Print the element at position (0,2) of x2.
+## 4. Print the element at position (0,2) of x2.
 
 
 ```python
 # START YOUR CODE HERE.
-
+x2[0,2]
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print(x2[0, 2])</code>
-</p>
-</details>
 
-#### 5. Print the second element of the last row of x2 using positive and negative indicies.
+## 5. Print the second element of the last row of x2 using positive and negative indicies.
 
 
 ```python
 # START YOUR CODE HERE.
-
+x2[-1, 1]
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print(x2[-1, 1])</code>
-</p>
-</details>
 
-#### 6. Assign a value of 25 to the first element of the last row of x2.
+## 6. Assign a value of 25 to the first element of the last row of x2.
 
 
 ```python
 # START YOUR CODE HERE.
-
+x2[-1, 0] = 25
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>x2[-1, 0] = 25</code>
-</p>
-</details>
+

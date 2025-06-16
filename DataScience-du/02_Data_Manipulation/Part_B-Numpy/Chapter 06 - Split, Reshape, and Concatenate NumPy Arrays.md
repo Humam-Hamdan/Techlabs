@@ -1,34 +1,15 @@
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-%cd drive/MyDrive/TechLabs/02_Data\ Manipulation/Part\ B\ -\ Numpy
-```
-
-
-```python
-# ALWAYS IMPORT NUMPY FIRST.
-import numpy as np
-```
-
 # Chapter 6 - Split, Reshape, and Concatenate NumPy Arrays
-### Hey Techie,   
+## Hey Techie,   
 Welcome to the sixth notebook of this Numpy tutorial series. We encourage you to take this notebook as a template to code along the instruction video, which you may find at: https://youtu.be/dWQvU9p7TdU. Today's video explains splitting and reshaping arrays as well as how to concatenate them. In the end, please try to solve the presented tasks.
 
-#### Have fun! :-)   
+## Have fun! :-)   
 *Video length in total*: 21 minutes   
 *Self-study time*: 21 minutes   
 *Total*: **42 minutes**   
-#### Credits
+## Credits
 Complete Python Numpy Tutorial for Beginners, Nate at StrataScratch, https://www.youtube.com/channel/UCW8Ews7tdKKkBT6GdtQaXvQ.
-<hr style="border:2px solid gray"> </hr>   
 
-## Reshaping of Arrays
+# Reshaping of Arrays
 
 Another useful type of operation is reshaping of arrays.
 The most flexible way of doing this is with the ``reshape`` method.
@@ -67,11 +48,11 @@ print(x.reshape((3, 1)))
 x[:, np.newaxis]
 ```
 
-## Array Concatenation and Splitting
+# Array Concatenation and Splitting
 
 All of the preceding routines worked on single arrays. It's also possible to combine multiple arrays into one, and to conversely split a single array into multiple arrays. We'll take a look at those operations here.
 
-### Concatenation of arrays
+## Concatenation of arrays
 
 Concatenation, or joining of two arrays in NumPy, is primarily accomplished using the routines ``np.concatenate``, ``np.vstack``, and ``np.hstack``.
 ``np.concatenate`` takes a tuple or list of arrays as its first argument, as we can see here:
@@ -133,7 +114,7 @@ y = np.array([[99],
 np.hstack([grid, y])
 ```
 
-### Splitting of arrays
+## Splitting of arrays
 
 The opposite of concatenation is splitting, which is implemented by the functions ``np.split``, ``np.hsplit``, and ``np.vsplit``.  For each of these, we can pass a list of indices giving the split points:
 
@@ -167,168 +148,96 @@ print(left)
 print(right)
 ```
 
-<hr style="border:2px solid gray"> </hr>   
 
-## Practice Tasks   
+# Practice Tasks   
 
-#### 1. Create a range from 1 to 16 and reshape it into a (2, 8) array.
+## 1. Create a range from 1 to 16 and reshape it into a (2, 8) array.
 
 
 ```python
 # YOUR CODE STARTS HERE.
-
+np.arange(0,16).reshape(2,8)
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.arange(1, 17).reshape(2, 8)</code><br />
-</p>
-</details>
 
-#### 2. Reshape x1 into a 1 dimensional column using slice notation and np.newaxis.
+## 2. Reshape x1 into a 1 dimensional column using slice notation and np.newaxis.
 
 
 ```python
 np.random.seed(1)  # seed for reproducibility
 x1 = np.random.randint(10, size=9)  # One-dimensional array
 # YOUR CODE STARTS HERE.
-
 ```
+x1[:, np.newaxis]
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>x1[:, np.newaxis]</code><br />
-</p>
-</details>
 
-#### 3. Concatenate arrays *x* and *y*.
+## 3. Concatenate arrays *x* and *y*.
 
 
 ```python
 x = np.array([2, 4, 6])
 y = np.array([8, 10, 12])
 # YOUR CODE STARTS HERE.
-
+np.concatenate([x,y])
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.concatenate([x, y])</code><br />
-</p>
-</details>
 
-#### 4. Concatenate arrays *x*, *y*, and *z*.
+## 4. Concatenate arrays *x*, *y*, and *z*.
 
 
 ```python
 z = [99, 99, 99]
 # YOUR CODE STARTS HERE.
-
+np.concatenate([x,y,z])
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.concatenate([x, y, z])</code><br />
-</p>
-</details>
 
-#### 5. Concatenate *array* with itself along the second axis.
+## 5. Concatenate *array* with itself along the second axis.
 
 
 ```python
 array = np.array([[5, 4, 1],
                  [4, 5, 6]])
 # YOUR CODE STARTS HERE.
-
+np.concatenate([grid, grid], axis=1)
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.concatenate([array, array], axis = 1)</code><br />
-</p>
-</details>
 
-#### 6. Concatenate x and *array* using the vstack function.
+## 6. Concatenate x and *array* using the vstack function.
 
 
 ```python
 # YOUR CODE STARTS HERE.
-
+np.vstack([x,array])
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.vstack((x, array))</code><br />
-</p>
-</details>
 
-#### 7. Split *x* on element 4 and element 7.
+## 7. Split *x* on element 4 and element 7.
 
 
 ```python
 x = [1, 2, 3, 99, 99, 3, 2, 1]
 # YOUR CODE STARTS HERE.
-
+x1, x2, x3 = np.split(x, [3,6])
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.split(x, [3, 6])</code><br />
-</p>
-</details>
 
-#### 8. Split *array* on row 3.
+## 8. Split *array* on row 3.
 
 
 ```python
 array = np.arange(25).reshape((5, 5))
 # YOUR CODE STARTS HERE.
-
+nvsplit = np.vsplit(array, [2])
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.vsplit(array, [2])</code><br />
-</p>
-</details>
 
-#### 9. Split *array* on column 4.
+## 9. Split *array* on column 4.
 
 
 ```python
 # YOUR CODE STARTS HERE.
-
+nhsplit = np.hsplit(array, [3])
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>np.hsplit(array, [3])</code><br />
-</p>
-</details>
+

@@ -63,11 +63,10 @@ print("nbytes:", x3.nbytes, "bytes")
 
 In general, we expect that ``nbytes`` is equal to ``itemsize`` times ``size``.
 
-<hr style="border:2px solid gray"> </hr>   
 
-## Practice Tasks
+# Practice Tasks
 
-#### For the following tasks 1, 2, and 3, refer to the array created below. Run this code to get started.
+## For the following tasks 1, 2, and 3, refer to the array created below. Run this code to get started.
 
 
 ```python
@@ -75,61 +74,32 @@ np.random.seed(1)  # seed for reproducibility
 x = np.random.randint(10, size=(3, 3))  # Two-dimensional array
 ```
 
-#### 1. Print the *ndim*, *shape*, and *size* attributes of *x*. The print code has already been created for you.
+## 1. Print the *ndim*, *shape*, and *size* attributes of *x*. The print code has already been created for you.
 
 
 ```python
 # INSERT YOUR CODE BELOW.
-print("x2 ndim: ", )
-print("x2 shape:", )
-print("x2 size: ", )
+print("x2 ndim: ", x.ndim)
+print("x2 shape:", x.shape)
+print("x2 size: ", x.size)
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print("x2 ndim: ", x.ndim)</code><br />
-    <code>print("x2 shape:", x.shape)</code><br />
-    <code>print("x2 size: ", x.size)</code><br />
-</p>
-</details>
-
-
-#### 2. Print the *dtype* of x.
+## 2. Print the *dtype* of x.
 
 
 ```python
 # INSERT YOUR CODE BELOW.
-print("dtype:", )
+print("dtype:", x.dtype)
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print("dtype:", x.dtype)</code>
-</p>
-</details>
 
-
-#### 3. Print the *itemsize* and *nbytes* of x.
+## 3. Print the *itemsize* and *nbytes* of x.
 
 
 ```python
 # INSERT YOUR CODE BELOW.
-print("itemsize:", , "bytes")
-print("nbytes:", , "bytes")
+print("itemsize:", x.itemsize , "bytes")
+print("nbytes:", x.nbytes , "bytes")
 ```
 
-<details>    
-<summary>
-    <font size="3" color="darkgreen"><b>Solution (click to expand)</b></font>
-</summary>
-<p>
-    <code>print("itemsize:", x.itemsize , "bytes")</code><br />
-    <code>print("nbytes:", x.nbytes , "bytes")</code>
-</p>
-</details>
+
