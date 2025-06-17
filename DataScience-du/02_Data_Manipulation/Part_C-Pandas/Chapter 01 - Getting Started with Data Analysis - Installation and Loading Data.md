@@ -8,7 +8,7 @@ Welcome to the first notebook of this Pandas tutorial series. We encourage you t
 *Self-study time*: 23 minutes   
 *Total*: **46 minutes**
 
-## Real-word Example
+# Real-word Example
 
 ```python
 # This is the convention used to import Pandas.
@@ -29,10 +29,13 @@ schema_df = pd.read_csv("data/survey_results_schema.csv")
 
 ```python
 # START YOUR CODE HERE.
-
+df.shape # Gives (rows, columnts) // it is an attribute and no method.
+df.info # shape and type for each cell.
+# objects = string, int = int, float = float.
+df.head() # gives the first five rows, when passing a value n gives the first n rows, we use de.tail() for the last rows.
 ```
 
-# Practice Tasks  
+# Practice Tasks
 
 ```python
 # Load a clean DataFrame.
@@ -44,14 +47,13 @@ df = pd.read_csv("data/survey_results_public.csv")
 ```python
 # START YOUR CODE HERE.
 
-rows = ...
-columns = ...
+rows = df.shape[0]
+columns = df.shape[1]
 
 # END YOUR CODE HERE.
 
 print("Our survey data has {} rows and {} columns.".format(rows, columns))
 ```
-
 
 ## 2. Five columns have the datatype float64: Which are those?   
 
@@ -59,7 +61,7 @@ print("Our survey data has {} rows and {} columns.".format(rows, columns))
 # START YOUR CODE HERE.
 
 # Add the respective column names to this list as strings.
-float64_columns = []  
+float64_columns = ['CompTotal', 'ConvertedComp', 'WorkWeekHrs', 'CodeRevHrs', 'Age']
 
 # END YOUR CODE HERE.
 
@@ -71,7 +73,7 @@ print("The following columns have the data type float64: ", " ,".join(float64_co
 ```python
 # START YOUR CODE HERE.
 
-last_10_rows = ...
+last_10_rows = df.tail(10)
 
 # END YOUR CODE HERE.
 

@@ -1,78 +1,46 @@
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-
-```python
-# RUN THIS COMMAND ONLY IF YOU USE GOOGLE COLAB.
-%cd drive/MyDrive/TechLabs/02_Data\ Manipulation/Part\ C\ -\ Pandas
-```
-
-# Chapter 7 - Sorting Data 
-### Hey Techie,   
+# Chapter 7 - Sorting Data
+## Hey Techie,   
 Welcome to the seventh notebook of this Pandas tutorial series. We encourage you to take this notebook as a template to code along the instruction video, which you may find at: https://youtu.be/T11QYVfZoD0. In the instruction video's first half, Corey explains how to sort data within DataFrames. Afterward, he demonstrates the new skills with the real-world example which we already know. As always, at the end of this notebook are practice tasks to test your skills.     
 
 **Here you may find the Pandas documentation:** https://pandas.pydata.org/docs/reference/index.html
 
-#### Have fun! :-)   
-    
+## Have fun! :-)   
+ 
 *Video length*: 16 minutes   
 *Self-study time*: 16 minutes   
 *Total*: **32 minutes**
-<hr style="border:2px solid gray"> </hr>   
 
-## Code-Snippets
-
+# Code-Snippets
 
 ```python
 # This is the convention used to import Pandas.
 import pandas as pd
-```
-
-
-```python
 people = {
     "first": ["Corey", 'Jane', 'John'], 
     "last": ["Schafer", 'Doe', 'Doe'], 
     "email": ["CoreyMSchafer@gmail.com", 'JaneDoe@email.com', 'JohnDoe@email.com']
 }
-```
+pdf = pd.DataFrame(people)
 
-
-```python
 # START YOUR CODE HERE.
 
 ```
 
-<hr style="border:2px solid gray"> </hr>   
-    
-## Real-word Example
-
+# Real-word Example
 
 ```python
 # These options help us to inspect our data more easily.
 pd.set_option("display.max_columns", 85)
 pd.set_option("display.max_rows", 85)
-```
-
-
-```python
 # These commands load the same survey data Corey is using in his video.
 df = pd.read_csv("data/survey_results_public.csv", index_col = "Respondent")
 schema_df = pd.read_csv("data/survey_results_schema.csv", index_col = "Column")
-```
 
-
-```python
 # START YOUR CODE HERE.
 
 ```
 
-<hr style="border:2px solid gray"> </hr>   
-   
-## Practice Tasks   
+# Practice Tasks
 
 
 ```python
@@ -80,7 +48,7 @@ schema_df = pd.read_csv("data/survey_results_schema.csv", index_col = "Column")
 df = pd.read_csv("data/survey_results_public.csv", index_col = "Respondent")
 ```
 
-#### 1. Filter out the 15 respondents with the most coding experience ("YearsCode" column) that live in Germany ("Country" column). To do so, change the data type from the "YearsCode" column to float (replace "Less than 1 year" with 0 and "More than 50 years" with 51; read hints for further explanation). Please return a list named *most_experience* that contains tuples as elements in the format of (respondent id, coding experience). This list should be in decreasing order with regard to the coding experience.
+## 1. Filter out the 15 respondents with the most coding experience ("YearsCode" column) that live in Germany ("Country" column). To do so, change the data type from the "YearsCode" column to float (replace "Less than 1 year" with 0 and "More than 50 years" with 51; read hints for further explanation). Please return a list named *most_experience* that contains tuples as elements in the format of (respondent id, coding experience). This list should be in decreasing order with regard to the coding experience.
 
 <br /> 
 <details>    
